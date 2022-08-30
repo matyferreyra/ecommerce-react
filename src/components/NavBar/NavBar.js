@@ -1,6 +1,7 @@
 import logo from "../../logo.svg";
 import "./NavBar.css";
 import cart from "../../assets/img/icon_cart_32px_f4c3b4.png";
+import CartWidget from "../CartWidget/CartWidget.js";
 
 const NavBar = ()=> {
     return (
@@ -15,14 +16,8 @@ const NavBar = ()=> {
                     <li><a href="#">ABOUT</a></li>
                 </ul>            
             </div>
-            <div classname="margenDerecho">
-                <ul>
-                <li><a href="#"><img classname="cart" src={cart} alt="cart"/></a></li>
-                <li><button> loggin </button></li>
-                </ul>
-            </div>
-        </div>
-        
+            <CartWidget/>
+        </div>        
     )
 }
 
