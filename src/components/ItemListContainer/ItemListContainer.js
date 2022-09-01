@@ -1,9 +1,8 @@
-const ItemListContainer = (titulo)=> {
+const ItemListContainer = ({titulo})=> {
     return (
         <div>
-            <p className="formato">Bienvenido!, en este segmento se iran visualizando los productos del ecommerce </p>
-        </div>
-        
+            <p>{titulo}</p>  
+        </div>                
     )
 }
 

@@ -1,0 +1,14 @@
+.order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    width: 20%;
+    height: 2.5em;    
+}
+
+.butt{
+    width: 2.5em;
+    height: 2.5em;
+}
