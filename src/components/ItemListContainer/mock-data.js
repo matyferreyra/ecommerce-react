@@ -1,0 +1,81 @@
+const data = [
+    {
+        id: 1,
+        name: "Shampoo Pelo Graso",
+        description: "bordado",
+        price: "$500",
+        stock: 1,
+    },   
+    {
+        id: 2,
+        name: "Shampoo Pelo Mixto",
+        description: "Soap",
+        price: "$350",
+        stock: 3,
+    },
+    {
+        id: 3,
+        name: "Acondicionador",
+        description: "bordado",
+        price: "$500",
+        stock: 1,
+    },
+    {
+        id: 4,
+        name: "Jabón Caléndula",
+        description: "Shampoo",
+        price: "$550",
+        stock: 6,
+    },
+    {
+        id: 5,
+        name: "Jabón Jazmin",
+        description: "Macrame",
+        price: "$750",
+        stock: 2,
+    },
+    {
+        id: 6,
+        name: "Jabón Lavanda",
+        description: "bordado",
+        price: "$500",
+        stock: 1,
+    },
+    {
+        id: 7,
+        name: "Jabón Palta Limón",
+        description: "bordado",
+        price: "$500",
+        stock: 1,
+    },
+    {
+        id: 8,
+        name: "Pasta Dental",
+        description: "bordado",
+        price: "$500",
+        stock: 1,
+    },
+    {
+        id: 9,
+        name: "Desodorante Eucalipto",
+        description: "bordado",
+        price: "$500",
+        stock: 1,
+    },
+    {
+        id: 10,
+        name: "Desodorante Lavanda",
+        description: "bordado",
+        price: "$500",
+        stock: 1,
+    },
+    {
+        id: 11,
+        name: "Balsamo Labial",
+        description: "bordado",
+        price: "$500",
+        stock: 1,
+    },
+];
+
+export default data;
