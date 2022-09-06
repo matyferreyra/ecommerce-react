@@ -23,7 +23,7 @@ useEffect(() => {
         <>
         {
             items.length>0 ? (        
-        <itemList itemList={items}/>
+        <ItemList productsList={items}/>
                 ) : (
                     <div> Cargando Productos...</div>
                 )

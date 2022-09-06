@@ -1,6 +1,7 @@
 const data = [
     {
         id: 1,
+        image: "/img/cosmetica/shampo_pelo_graso.png",
         name: "Shampoo Pelo Graso",
         description: "bordado",
         price: "$500",

@@ -1,6 +1,5 @@
 import logo from "../../logo.svg";
 import "./NavBar.css";
-import cart from "../../assets/img/icon_cart_32px_f4c3b4.png";
 import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = ()=> {

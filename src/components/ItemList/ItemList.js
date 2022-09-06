@@ -2,13 +2,14 @@
 
 import Item from "../Item/Item";
 
-const ItemList = ({ItemList}) => {
+const ItemList = ({productsList}) => { //itemList es un objeto
     return (
         <>
-            {ItemList.map((producto) => { //ESTOY RETORNANDO UNA NUEVA LISTA DE ELEMENTOS JSX QUE ES CADA UNO DE MIS PRODUCTOS
+            {productsList.map((producto) => { //ESTOY RETORNANDO UNA NUEVA LISTA DE ELEMENTOS JSX QUE ES CADA UNO DE MIS PRODUCTOS
                 return (
                     <Item
                         key={producto.id}
+                        image={producto.image}
                         name={producto.name}
                         description={producto.description}
                         price={producto.price}
