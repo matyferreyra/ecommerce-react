@@ -1,7 +1,8 @@
-.formato{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3rem;   
-    color: red;
-    text-align: center; 
-    margin: auto;
+.listContainer{
+    width: 100%;
+    display: flex;    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: 0.1em;
 }

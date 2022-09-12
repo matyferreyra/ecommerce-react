@@ -1,5 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  background-image: url("./assets/manchas.jpg");
+  min-height: 100%;
+  background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+    padding: 0 !important;
 }
 
 .App-logo {
