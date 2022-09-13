@@ -8,11 +8,12 @@ const NavBar = ()=> {
     return (
         <>
         {/* <link to="/"></div></link> */}
-        <div className="navBar_container"></div>
+        <div className="navBar_container">
         <div className="margenDerecho">
             <ul>
                 {/* <li><a href="#">INICIO</a></li> */}
                 <Link to="/">INICIO</Link>           
+                <Link to="/category/shampoo">Shampoo</Link>                
                 {/* <li><a href="#">NOSOTROS</a></li> */}
                 {/* <Link to="">NOSOTROS</Link>          */}
                 {/* <li><a href="#">CONTACTO</a></li> */}
@@ -20,7 +21,7 @@ const NavBar = ()=> {
             </ul>   
         </div>
         <CartWidget/>
-        {/* </div> */}
+        </div>
         </>                
     )
 }

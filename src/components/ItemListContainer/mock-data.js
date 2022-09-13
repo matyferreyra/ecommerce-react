@@ -5,6 +5,7 @@ const data = [
         name: "Shampoo Pelo Graso",
         description: "Shampoo hecho con materias primas 100% naturales, sin ningún agregado quimico de origen industrial. Su duración promedio (depende de su uso) es de 1 mes.",
         price: "Precio: $ 800,00.-",
+        category: "shampoo",
         stock: 1,
     },   
     {
@@ -13,6 +14,7 @@ const data = [
         name: "Shampoo Pelo Mixto",
         description: "Shampoo hecho con materias primas 100% naturales, sin ningún agregado quimico de origen industrial. Su duración promedio (depende de su uso) es de 1 mes.",
         price: "Precio: $ 800,00.-",
+        category: "shampoo",
         stock: 3,
     },
     {
@@ -21,6 +23,7 @@ const data = [
         name: "Acondicionador",
         description: "Acondicionador de cabello con materias primas 100% naturales, sin ningún agregado quimico de origen industrial. Su duración promedio (depende de su uso) es de 1 mes.",
         price: "Precio: $ 800,00.-",
+        category: "acondicionador",
         stock: 1,
     },
     {
@@ -29,6 +32,7 @@ const data = [
         name: "Jabón Caléndula",
         description: "Jabón de uso corporal elaborado con materias primas 100% de origen natural. Fragancia calendula y manzanilla.",
         price: "Precio $550.-",
+        category: "jabon",
         stock: 6,
     },
     {
@@ -37,6 +41,7 @@ const data = [
         name: "Jabón Jazmin",
         description: "Jabón de uso corporal elaborado con materias primas 100% de origen natural. Fragancia jazmin y rosas.",
         price: "Precio $750.-",
+        category: "jabon",
         stock: 2,
     },
     {
@@ -45,6 +50,7 @@ const data = [
         name: "Jabón Lavanda",
         description: "abón de uso corporal elaborado con materias primas 100% de origen natural. Fragancia lavanda.",
         price: "Precio $500.-",
+        category: "jabon",
         stock: 1,
     },
     {
@@ -53,6 +59,7 @@ const data = [
         name: "Jabón Palta Limón",
         description: "Jabón de uso corporal elaborado con materias primas 100% de origen natural. Fragancia palta y limon.",
         price: "Precio $500.-",
+        category: "jabon",
         stock: 1,
     },
     {
@@ -61,6 +68,7 @@ const data = [
         name: "Pasta Dental",
         description: "Jabón de uso corporal elaborado con materias primas 100% de origen natural. Presentación en frasco de 150gr.",
         price: "Precio: $ 900,00.-",
+        category: "pasta_dental",
         stock: 1,
     },
     {
@@ -69,6 +77,7 @@ const data = [
         name: "Desodorante Eucalipto",
         description: "bordado",
         price: "$500",
+        category: "desodorante",
         stock: 1,
     },
     {
@@ -77,6 +86,7 @@ const data = [
         name: "Desodorante Lavanda",
         description: "bordado",
         price: "$500",
+        category: "desodorante",
         stock: 1,
     },
     {
@@ -85,6 +95,7 @@ const data = [
         name: "Balsamo Labial",
         description: "Balsamo labial. Ideal para tener siempre a mano en la cartera o mochila.",
         price: "Precio: $ 900,00.-",
+        category: "labial",
         stock: 1,
     },
     {
@@ -93,6 +104,7 @@ const data = [
         name: "Jabon Avena",
         description: "Jabón de uso corporal elaborado con materias primas 100% de origen natural. Fragancia Avena.",
         price: "Precio: $ 900,00.-",
+        category: "jabon",
         stock: 1,
     },
 ];
