@@ -19,7 +19,8 @@ return (
     <Routes>      
       {/* <Route path='/' element={</>}></Route>       */}
       <Route path='/' element={<ItemListContainer/>}/>
-      <Route path='/detail' element={<ItemDetailContainer/>}/>      
+      <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+      <Route path='/item/:id' element={<ItemDetailContainer/>}/>      
       </Routes>     
     </div>
     </BrowserRouter>

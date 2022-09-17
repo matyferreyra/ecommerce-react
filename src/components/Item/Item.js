@@ -8,10 +8,10 @@ const Item = ({id, image, name, description, price, stock}) => {
         <p className="descript">{description}</p>
         <p className="price">{price}</p> 
         <p className="stock">{stock}</p>
-        <Link to={""}>
+        <Link to={`/item/${Item.id}`}>
             <button className="buttonDetail"> Ver detalle del producto</button>
         </Link>
-    </div>;
+        </div>;
 }
 
 export default Item;

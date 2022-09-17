@@ -14,6 +14,11 @@ const NavBar = ()=> {
                 {/* <li><a href="#">INICIO</a></li> */}
                 <Link to="/">INICIO</Link>           
                 <Link to="/category/shampoo">Shampoo</Link>                
+                <Link to="/category/acondicionador">Acondicionador</Link> 
+                <Link to="/category/jabon">Jabon</Link> 
+                <Link to="/category/labial">Labial</Link> 
+                <Link to="/category/desodorante">Desodorante</Link>
+                <Link to="/category/pasta_dental">Pasta Dental</Link>
                 {/* <li><a href="#">NOSOTROS</a></li> */}
                 {/* <Link to="">NOSOTROS</Link>          */}
                 {/* <li><a href="#">CONTACTO</a></li> */}

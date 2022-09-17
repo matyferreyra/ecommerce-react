@@ -1,12 +1,15 @@
 import "./Header.css";
 import logo from "../../assets/Logo Tiendita Pausa 400px SVG.svg";
 // import CartWidget from "../CartWidget/CartWidget";
+import {Link} from "react-router-dom";
 
 const Header = ()=> {
     return (
         <div className="header">
             <div id="logo">
+                <Link to="/">
                 <img src={logo} alt="logotipo" id="logo"/>
+                </Link>
             </div>
             <div className="brandContainer">
                 <p id="pausa">

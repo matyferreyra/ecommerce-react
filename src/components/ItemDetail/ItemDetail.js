@@ -3,10 +3,11 @@ import Item from "../Item/Item"
 import ItemCount from '../../components/ItemCount/ItemCount';
 
 
+
 const ItemDetail = ({viewDetail}) => {
     
     const onAdd = (counter) => {
-        console.log(counter);
+        
     }
 
     return (
