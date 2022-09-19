@@ -7,6 +7,7 @@ import Header from "./components/Header/Header"
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemDetail from "./components/ItemDetail/ItemDetail";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Pages404 from "../src/Pages/Pages404";
 
 
 function App() {
@@ -20,7 +21,8 @@ return (
       {/* <Route path='/' element={</>}></Route>       */}
       <Route path='/' element={<ItemListContainer/>}/>
       <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
-      <Route path='/item/:id' element={<ItemDetailContainer/>}/>      
+      <Route path='/item/:id' element={<ItemDetailContainer/>}/>  
+      <Route path='/*' element={<Pages404/>}/>    
       </Routes>     
     </div>
     </BrowserRouter>
