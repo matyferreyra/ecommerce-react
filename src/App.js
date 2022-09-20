@@ -8,24 +8,29 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ItemDetail from "./components/ItemDetail/ItemDetail";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Pages404 from "../src/Pages/Pages404";
+import { CartProvider } from './context/CartContext';
+import {CartProvider} from "./context/CartContext";
 
 
 function App() {
   
 return (
-    <BrowserRouter>
-    <div className="App">
-    <Header/>
-    <NavBar/>
-    <Routes>      
-      {/* <Route path='/' element={</>}></Route>       */}
-      <Route path='/' element={<ItemListContainer/>}/>
-      <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
-      <Route path='/item/:id' element={<ItemDetailContainer/>}/>  
-      <Route path='/*' element={<Pages404/>}/>    
-      </Routes>     
-    </div>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <div className="App">
+          <Header/>
+          <NavBar/>
+          <Routes>      
+            {/* <Route path='/' element={</>}></Route>       */}
+            <Route path='/' element={<ItemListContainer/>}/>
+            <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+            <Route path='/item/:productId' element={<ItemDetailContainer/>}/>  
+            <Route path="/cart" element={CartContainer}/>
+            <Route path='/*' element={<Pages404/>}/>    
+            </Routes>     
+        </div>
+      </BrowserRouter>
+    </CartProvider>
   );  
 }
 
