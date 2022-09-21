@@ -26,14 +26,14 @@ const ItemListContainer = ()=> {
         }
 
         });
-    }, [categoryId]); // 5TO PASO: Para que el filtro se ejecute yo tengo que colocar dentro de las dependencias [] mi variable de categoryId
+    }, [categoryId]); // 5TO PASO: Para que el filtro se ejecute yo tengo que colocar dentro de las dependencias [] mi variable de categoryId. Acá paso la dependencia, es decir a lo que tiene que poner el ojo para que el componente se renderice las veces que esa dependencia se actualice.
 
     return (
         <>
         <div className="listContainer">
         {
             items.length>0 ? (     // aplicamos un ternario en donde la validación determina de que en caso de que no haya item alguno se muestre el mensaje de " cargando productos", y si los hay directamente renderiza el listado de productos  
-        <ItemList productsList={items} classname="listContainer"/>
+        <ItemList productsList={items} classname="listContainer"/> //acá estoy enviando "items" (de la linea 10) como props 
                 ) : (
                     <div> Cargando Productos...</div>
                 )

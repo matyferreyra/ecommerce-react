@@ -1,4 +1,6 @@
 import React from "react";
+import {useState} from "react";
+
 
 export const CartContext = React.createContext(); //Aca creamos nuestro contexto de CartContext
 

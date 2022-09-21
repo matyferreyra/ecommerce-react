@@ -10,6 +10,7 @@ const ItemList = ({productsList}) => { //HAY UN COMPONENTE (ITEMLIST) AL CUAL LE
                 return (
                     <Item
                         key={producto.id}
+                        id={producto.id}
                         image={producto.image}
                         name={producto.name}
                         // description={producto.description}
