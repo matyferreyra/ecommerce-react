@@ -34,7 +34,7 @@ useEffect(() => {
 }, [productId]); //en esta dependencia pasamos el id
 
     return (
-        <ItemDetail viewDetail={item}/>
+        <ItemDetail viewDetail={item}/>        
     );
 }
 
