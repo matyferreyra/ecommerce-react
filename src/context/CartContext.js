@@ -7,7 +7,7 @@ export const CartContext = React.createContext(); //Aca creamos nuestro contexto
 export const CartProvider = ({children})=> {
     
     const [ productCartList, setProductCartList ] = useState([]);
-    console.log(productCartList)
+    console.log({productCartList})
 
     // const addItem = (item, quantity) => {
     //     const newProduct = {
@@ -21,7 +21,7 @@ export const CartProvider = ({children})=> {
     // }
 
     const addItem = (item, quantity) => {
-
+        console.log(item)
         // validar si el prod existe en el array -- true o false
         if (isInCart(item.id)) {// si (prod existe en el array)
             
@@ -61,11 +61,16 @@ export const CartProvider = ({children})=> {
         return productCartList.find(x => x.id === itemId)
     }
 
+    const totalProductsPriceInCart = () => {
+        return productCartList.reduce((acc, item) => acc + (item.price * item.quantity), 0)
+    }
 
-
+    const productsInCart = () => {
+        return productCartList.reduce((acc, item) => acc + item.quantity, 0)
+    }
     
     return (
-        <CartContext.Provider value={{productCartList, addItem, removeItem, clearProducts}}>  {/* //Aca creamos un componente que retorna el proveedor del contexto // */}
+        <CartContext.Provider value={{productCartList, addItem, removeItem, clearProducts, totalProductsPriceInCart, productsInCart}}>  {/* //Aca creamos un componente que retorna el proveedor del contexto // */}
         {children}
         </CartContext.Provider> 
     )

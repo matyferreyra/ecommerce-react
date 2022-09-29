@@ -26,7 +26,7 @@ return (
             <Route path='/' element={<ItemListContainer/>}/>
             <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
             <Route path='/item/:productId' element={<ItemDetailContainer/>}/>  
-            <Route path="/cart" element={CartContainer}/>
+            <Route path="/cart" element={<CartContainer/>}/>
             <Route path='/*' element={<Pages404/>}/>    
             </Routes>     
         </div>

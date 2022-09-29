@@ -3,33 +3,55 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
 export const CartContainer = ()=> {
-    const {productCartList, removeItem} = useContext(CartContext); 
+    const {productCartList, removeItem, totalProductsPriceInCart} = useContext(CartContext); 
     
     return(
         <>
-        <div>
-        CartContainer
-        <div> 
-            {/* el total es (acá va una comparación entre el acumulador total de productos)<1
-            ? <p> No te vayas sin comprar! <Link to={``} <button onClick=()>PRODUCTOS</button> </Link> </p> 
-            : 
-             */}
-            {value.productCartList.map{item=>(
+            <h3> CartContainer </h3> 
+            {productCartList.length < 1
+                ? 
+                
                 <>
-                <ul className="itemFinal">
-                    <li> {item.name} - {item.category} - {item.quantity} - {item.price}</li>
-                    <li><button onClick={()=>removeItem(item.id)}>eliminar producto</button></li>
-                </ul>
+                    <p> No te vayas sin comprar!</p>  
+                    <Link to="/">
+                        <button>COMPRAR PRODUCTOS</button> 
+                    </Link>
+                </> 
+                
+                : 
+                <>
+                    {
+                        productCartList.map((item) => {
+                        return (
+                            <div key={item.id}>  
+                                <ul className="itemFinal" 
+                                    
+                                    >
+                                    <li> Producto: {item.name} </li> 
+                                    <li>    Categoria: {item.category} </li>  
+                                    <li>    Cantidad: {item.quantity} </li>  
+                                    <li>    Precio: $ {item.price}</li> 
+                                    
+                                    <li>
+                                        <button 
+                                            onClick={()=>removeItem(item.id)}
+                                        >
+                                            eliminar producto
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        )
+                    })}
+                    <h6>Total de la compra: { totalProductsPriceInCart() } </h6>
+                    <button>Finalizar mi compra</button>
+                    {/* LLAMAR FUnCION PARA VACIAR CARRITO */}
                 </>
-            )}}
-        </div>
-        {/* <Link to={``}> */}
-            <button onClick={()=>removeItem(item.id)}>Finalizar mi compra</button>
-        {/* </Link> */}
-        </div>
+            }
         
         </>
     )
 }
 
 export default CartContainer;
+
