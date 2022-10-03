@@ -6,8 +6,8 @@ export const CartContext = React.createContext(); //Aca creamos nuestro contexto
 
 export const CartProvider = ({children})=> {
     
-    const [ productCartList, setProductCartList ] = useState([]);
-    console.log({productCartList})
+    const [ productCartList, setProductCartList ] = useState([]); //aca guardamos en listado de productos del carrito
+    // console.log({productCartList})
 
     // const addItem = (item, quantity) => {
     //     const newProduct = {
@@ -21,19 +21,21 @@ export const CartProvider = ({children})=> {
     // }
 
     const addItem = (item, quantity) => {
-        console.log(item)
+        // console.log(item)    
         // validar si el prod existe en el array -- true o false
         if (isInCart(item.id)) {// si (prod existe en el array)
             
-            //no tengo generar duplicado y tengo que aumentar la cantidad de ese prod.
+            //no tengo que generar duplicado del mismo producto y tengo que aumentar la cantidad de unidades de ese mismo prod.
             const productInArray = findProductById(item.id)
             productInArray.quantity += quantity;
+
+            productInArray.quantityFinal = productInArray.quantity * productInArray.price; //esta funcion lo que hace es calcular el precio total del producto de acuerdo a la cantidad de unidades que el usuario quiera comprar del mismo.    
             
             const newCartArray = [ ...productCartList ]
             setProductCartList(newCartArray)
 
         } else {
-            // quiere decir que es un prod nuevo
+            // quiere decir que es un prod nuevo (ya que nunca fue agredado previamente al carrito y no habria duplicado)
             const newProduct = { ...item, quantity: quantity } // genero un nuevo objeto, con todo lo que viene de item y creo la clave quantity
             setProductCartList([...productCartList, newProduct]) // actualizamos array con el método de state
         }
@@ -44,7 +46,7 @@ export const CartProvider = ({children})=> {
         setProductCartList(newProductList);
     }
 
-    const clearProducts = () => { //creo la funcion clear para limpiar el carrito de compras, y le paso como parametro el carrito con los productos
+    const clearProducts = () => { //acá estoy creando la funcion clear para limpiar el carrito de compras, y le paso como parametro el carrito con los productos
         //const clear = []; //declaro un array vacio
         //setProductCartList(clear); //a la variable del state le paso el arrary "clear" que está vacio
         setProductCartList([]);
@@ -57,7 +59,7 @@ export const CartProvider = ({children})=> {
     }
     
     const findProductById = (itemId) => {
-        // separamos resposabilidades de la fn principal addItem
+        // separamos resposabilidades de la funcion principal addItem
         return productCartList.find(x => x.id === itemId)
     }
 

@@ -6,7 +6,7 @@ const data = [
         description: "Shampoo hecho con materias primas 100% naturales, sin ningún agregado quimico de origen industrial. Su duración promedio (depende de su uso) es de 1 mes.",
         price: 800,
         category: "shampoo",
-        stock: 1,
+        stock: 15,
     },   
     {
         id: 2,
@@ -15,7 +15,7 @@ const data = [
         description: "Shampoo hecho con materias primas 100% naturales, sin ningún agregado quimico de origen industrial. Su duración promedio (depende de su uso) es de 1 mes.",
         price: 800,
         category: "shampoo",
-        stock: 3,
+        stock: 8,
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const data = [
         description: "Acondicionador de cabello con materias primas 100% naturales, sin ningún agregado quimico de origen industrial. Su duración promedio (depende de su uso) es de 1 mes.",
         price: 800,
         category: "acondicionador",
-        stock: 1,
+        stock: 9,
     },
     {
         id: 4,
@@ -48,10 +48,10 @@ const data = [
         id: 6,
         image: "/img/cosmetica/jabon_lavanda.png",
         name: "Jabón Lavanda",
-        description: "abón de uso corporal elaborado con materias primas 100% de origen natural. Fragancia lavanda.",
+        description: "jabón de uso corporal elaborado con materias primas 100% de origen natural. Fragancia lavanda.",
         price: 500,
         category: "jabon",
-        stock: 1,
+        stock: 5,
     },
     {
         id: 7,
@@ -60,7 +60,7 @@ const data = [
         description: "Jabón de uso corporal elaborado con materias primas 100% de origen natural. Fragancia palta y limon.",
         price: 500,
         category: "jabon",
-        stock: 1,
+        stock: 5,
     },
     {
         id: 8,
@@ -69,7 +69,7 @@ const data = [
         description: "Jabón de uso corporal elaborado con materias primas 100% de origen natural. Presentación en frasco de 150gr.",
         price: 900,
         category: "pasta_dental",
-        stock: 1,
+        stock: 8,
     },
     {
         id: 9,
@@ -78,7 +78,7 @@ const data = [
         description: "bordado",
         price: 500,
         category: "desodorante",
-        stock: 1,
+        stock: 7,
     },
     {
         id: 10,
@@ -87,7 +87,7 @@ const data = [
         description: "bordado",
         price: 500,
         category: "desodorante",
-        stock: 1,
+        stock: 8,
     },
     {
         id: 11,
@@ -96,7 +96,7 @@ const data = [
         description: "Balsamo labial. Ideal para tener siempre a mano en la cartera o mochila.",
         price: 900,
         category: "labial",
-        stock: 1,
+        stock: 11,
     },
     {
         id: 12,
@@ -105,7 +105,7 @@ const data = [
         description: "Jabón de uso corporal elaborado con materias primas 100% de origen natural. Fragancia Avena.",
         price: 900,
         category: "jabon",
-        stock: 1,
+        stock: 6,
     },
 ];
 
@@ -115,7 +115,7 @@ export const productItem = {
         image: "/img/cosmetica/jabon_avena.png",
         name: "Jabon Avena",
         description: "Jabón de uso corporal elaborado con materias primas 100% de origen natural. Fragancia Avena.",
-        price: "Precio: $ 900,00.-",
+        price: 900,
         stock: 1
 };
 

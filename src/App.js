@@ -5,7 +5,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 
 import Header from "./components/Header/Header"
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import CartContainer from './components/CartContainer/CartContainer';
+import CartBuy from './components/CartBuy/CartBuy';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Pages404 from "../src/Pages/Pages404";
@@ -26,9 +26,9 @@ return (
             <Route path='/' element={<ItemListContainer/>}/>
             <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
             <Route path='/item/:productId' element={<ItemDetailContainer/>}/>  
-            <Route path="/cart" element={<CartContainer/>}/>
+            <Route path="/cart" element={<CartBuy/>}/>
             <Route path='/*' element={<Pages404/>}/>    
-            </Routes>     
+          </Routes>     
         </div>
       </BrowserRouter>
     </CartProvider>

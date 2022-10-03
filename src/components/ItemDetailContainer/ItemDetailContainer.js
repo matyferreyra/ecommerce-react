@@ -36,6 +36,16 @@ useEffect(() => {
 }, [productId]); //en esta dependencia pasamos el id
 
     return (
+//         <>
+//         <div className="detailContainer">
+//         {
+//             item.length>0 ? (     // aplicamos un ternario en donde la validación determina de que en caso de que no haya item alguno se muestre el mensaje de " cargando productos", y si los hay directamente renderiza el listado de productos  
+//         <ItemDetail viewDetail={item} classname="detailContainer"/> //acá estoy enviando "items" (de la linea 10) como props 
+//                 ) : (
+//                     <div> Cargando Productos...</div>
+//                 )
+// }</div>
+//         </>
         <ItemDetail viewDetail={item}/>        
     );
 }

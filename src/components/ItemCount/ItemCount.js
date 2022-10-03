@@ -30,6 +30,9 @@ const ItemCount = (props) =>{
             <div>
                 <button onClick={()=> {props.onAdd(counter)}} className="addCart">Agregar producto al carro de compras</button>
             </div>
+            <div>
+                <button onClick={()=> {props.puttOff(counter)}} className="addCart">Quitar producto del carro de compras</button>
+            </div>
         </>
             }
         </>
