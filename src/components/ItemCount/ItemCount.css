@@ -1,22 +1,94 @@
-.order{
-    margin-top: 2em;
+.styleCounter{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: auto;
+    justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 25%;
     height: 2.5em;    
 }
 
-.butt{
-    width: 2.5em;
-    height: 2.5em;
+.countItem{
+    width: 2.5m;
+    height: 2.5em;        
+    border-color: rgb(138, 120, 132);
+}
+
+.more{
+    border-radius: 8px;
+    margin-left: 1em;
+    padding: 0.3em 0.7em;
+    background-color:rgb(138, 120, 132);
+    color: #eee;
+    width: 2.2em;
+    height: 2.2em;
+}
+
+#counter{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.less{
+    border-radius: 8px;
+    margin-right: 1em;
+    padding: 0.3em 0.7em;
+    background-color: rgb(138, 120, 132);
+    color: #eee;
+    display: block;
+    width: 2.2em;
+    height: 2.2em;
 }
 
 .addCart{
     width: 20em;
     height: 3em;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 1em;    
+    border-radius: 10px;
+    font-weight: bold;    
+}
+
+.removeCart{
+    width: 20em;
+    height: 3em;    
+    margin-top: 1em;
+    margin-bottom: 2em;    
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------     EFECTOS HOVER   --------------------------------------- */
+
+.amount:hover:not(:disabled) {
+    background: #fffead;    
+}
+
+.more:hover:not(:disabled) {
+    background: #5ee45e;
+    color: whitesmoke;
+}
+
+.less:hover:not(:disabled) {
+    background: rgb(255, 49, 49);
+    color: whitesmoke;
+}
+
+.amount_items:disabled {
+    cursor: auto;
+    color: #83ff83;
+}
+
+.addCart:hover:not(:disabled) {
+    background: #645993;
+    color: whitesmoke;
+    box-shadow: 0 0 40px rgb(231, 196, 93);
+    transition: all 0.2s ease;
+}
+
+.removeCart:hover:not(:disabled) {
+    background: #645993;
+    color: whitesmoke;
+    box-shadow: 0 0 40px rgb(231, 196, 93);
+    transition: all 0.2s ease;
 }

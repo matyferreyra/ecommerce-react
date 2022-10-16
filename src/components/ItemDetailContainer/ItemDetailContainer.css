@@ -1,0 +1,26 @@
+#loaderContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-weight: bold;
+    font-size: 3.5rem;
+    background-color: #E1B590;
+}
+
+.detailContainer{                   /*------------------    ESTILOS DE LA CARD PRODUCTO     --------------------*/
+    margin: 3em auto 4em auto;    
+    width: 30%;   
+    
+    backdrop-filter: blur(5px) saturate(181%);
+    -webkit-backdrop-filter: blur(5px) saturate(181%);
+    background-color: rgba(103, 85, 109, 0.45);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    
+    border-color: #f3b365;
+    border-style: ridge;
+    border-width: 2px; 
+}

@@ -9,7 +9,18 @@
     padding: 1em 0;    
     border-color: #f3b365;
     border-style: ridge;
-    border-width: 2px;    
+    border-width: 2px; 
+    display:flex;
+    flex-direction: column;    
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.cardContainer:hover{
+    transition: width 0.5s;    
+    -webkit-box-shadow: 0px 1px 28px 16px rgb(203, 178, 223);
+    -moz-box-shadow: 0px 1px 28px 16px rgb(203, 178, 223);
+    box-shadow: 0px 1px 28px 16px rgb(203, 178, 223);
 }
 
 .sizeImg {
@@ -24,6 +35,22 @@
     font-size: 0.2em;
 }
 
-.buttonDetail{
-    
+.buttonViewDetail{
+    border-radius: 1rem;
+    font-weight: bold;
+    background-color: #eee;
+    border: none;
+    padding: 0.25rem;        
+    width: 10em;
+    border-radius: 1rem;
+    color: #756c65;        
+    cursor: pointer;
 }
+
+.buttonViewDetail:hover:not(:disabled) {
+        background: #645993;
+        color: whitesmoke;
+        box-shadow: 0 0 40px rgb(231, 196, 93);
+        transition: all 0.2s ease;
+    }
+

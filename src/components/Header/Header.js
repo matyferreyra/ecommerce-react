@@ -1,6 +1,5 @@
 import "./Header.css";
 import logo from "../../assets/Logo Tiendita Pausa 400px SVG.svg";
-// import CartWidget from "../CartWidget/CartWidget";
 import {Link} from "react-router-dom";
 
 const Header = ()=> {

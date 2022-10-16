@@ -1,3 +1,100 @@
-.itemFinal{
+.styleCardBuy{
+    margin:4em auto;
+    width: 50%;
     
+    backdrop-filter: blur(5px) saturate(181%);
+    -webkit-backdrop-filter: blur(5px) saturate(181%);
+    background-color: rgba(170, 151, 177, 0.45);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-style: ridge;
+    border-width: 4px;
+    border-color: rgb(185, 207, 182);
+}
+
+.cardItemOrder{
+    margin: 1.25em auto;        
+    width: 50%;   
+    text-align: start;
+    backdrop-filter: blur(5px) saturate(181%);
+    -webkit-backdrop-filter: blur(5px) saturate(181%);
+    background-color: rgba(184, 180, 185, 0.45);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    
+    border-style: ridge;
+    border-width: 2px;    
+    font-size: 1.2em;
+}
+
+.removeProduct{
+    border-radius: 1rem;
+    font-weight: bold;
+    background-color: #eee;
+    border: none;
+    padding: 0.25rem;        
+    width: 10em;
+    border-radius: 1rem;
+    color: #756c65;        
+    cursor: pointer;   
+}
+
+.removeOrder {
+    font-size: 1em;
+    margin-bottom: 5em;
+    border-radius: 1rem;
+    font-weight: bold;
+    background-color: rgb(136, 135, 135);
+    border: none;
+    padding: 0.25rem;        
+    width: 15em;
+    height: 3em;
+    border-radius: 1rem;
+    color: black;        
+    cursor: pointer; 
+}
+
+#backShop{
+    border-radius: 1rem;
+    font-weight: bold;
+    background-color: #eee;
+    border: none;
+    padding: 0.25rem;        
+    width: 10em;
+    border-radius: 1rem;
+    color: black;        
+    cursor: pointer;   
+}
+
+#priceFinal{
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.cardItemOrder ul{
+    list-style: none;
+}
+
+
+/* ------------------------------------     EFECTOS HOVER   ------------------------------- */
+
+.removeProduct:hover:not(:disabled) {
+    background: red;
+    color: whitesmoke;
+    box-shadow: 0 0 40px rgb(231, 196, 93);
+    transition: all 0.2s ease;
+}
+
+.removeOrder:hover:not(:disabled) {
+    background: red;
+    color: whitesmoke;
+    box-shadow: 0 0 40px rgb(231, 196, 93);
+    transition: all 0.2s ease;
+}
+
+#backShop:hover:not(:disabled) {
+    background: #645993;
+    color: whitesmoke;
+    box-shadow: 0 0 40px rgb(231, 196, 93);
+    transition: all 0.2s ease;
 }

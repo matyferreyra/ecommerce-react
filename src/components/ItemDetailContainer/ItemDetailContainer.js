@@ -1,52 +1,48 @@
-import data from "../ItemListContainer/mock-data";
 import ItemDetail from "../ItemDetail/ItemDetail";
-
-// import ItemList from "../ItemList/ItemList";
 import "./ItemDetailContainer.css"; 
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import { db } from "../../utils/firebase";
+import {doc, getDoc} from "firebase/firestore";
+
 
 const ItemDetailContainer = ()=> {
 
 
-    const {productId} = useParams(); ////acá estamos desestructurando un objeto y capturandolo (definiendo) en la variable "id" como una ruta dinámica
+    const {productId} = useParams(); 
+
+    const [item, setItem] = useState({}); 
     
+    const [isLoading, setIsLoading] = useState(true);
 
-
-    const [item, setItem] = useState({}); //items seria una variable, y setItems el método por el cual se actualiza la variable
-    
-    const getData = (productIdParam) => {
-        return new Promise ((resolve,reject) => { //EL SEGMENTO DE LINEA 15 A 21 EMULA UNA PETICIÓN A UNA API, QUE DEMORA 2SEG EN TRAER LOS DATOS. Esta es una función para retornar un producto.
-            
-            setTimeout(() => {
-                const detail = data.find(it => it.id === parseInt(productIdParam));
-                //aca estamos buscando dentro de nuestro arreglo cual seria el primer elemento que cumpla la condicion de que el id sea igual al parametro que yo le paso por la URL que estamos capturando en la variable id de la linea 10. Y una vez que lo encuentra ya lo podemos retornar dentro del siguiente resolve....
-        resolve (detail); //Acá esta la DATA que devuelve la petición al API. productItem
-    }, 2000);
-})};
-
-useEffect(() => {
-    getData(productId).then(result => { //EN ESTE USEEFFECT LEVANTAMOS LA DATA PARA QUE ESTE LA PASE AL STATE DEL COMPONENTE QUE ESTAMOS CREANDO EN LA LINEA 12. Luego de que se resuelve la promesa hacemos un callback a Item.
-        setItem(result);        
-    });
-
-    
-}, [productId]); //en esta dependencia pasamos el id
+useEffect(()=>{
+    const getProducto = async()=>{        
+        const queryRef = doc(db,"Productos",productId);
+        const response = await getDoc(queryRef);
+        const newItem = {
+            id: response.id,
+            ...response.data(),
+        }
+        
+        setItem(newItem)
+        setIsLoading(false)
+    }
+    getProducto();
+},[productId])
 
     return (
-//         <>
-//         <div className="detailContainer">
-//         {
-//             item.length>0 ? (     // aplicamos un ternario en donde la validación determina de que en caso de que no haya item alguno se muestre el mensaje de " cargando productos", y si los hay directamente renderiza el listado de productos  
-//         <ItemDetail viewDetail={item} classname="detailContainer"/> //acá estoy enviando "items" (de la linea 10) como props 
-//                 ) : (
-//                     <div> Cargando Productos...</div>
-//                 )
-// }</div>
-//         </>
-        <ItemDetail viewDetail={item}/>        
+        <>
+        <div className="detailContainer">
+        {
+            !isLoading ? (      
+        <ItemDetail viewDetail={item} classname="detailContainer"/> 
+                ) : (
+                    <div id="loaderContainer"> Cargando Productos...</div>
+                )
+}</div>
+        </>              
     );
 }
 

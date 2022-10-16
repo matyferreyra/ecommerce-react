@@ -1,17 +1,28 @@
 .cart{
-    width: 2rem;
+    width: 3em;
+    position: relative;
+    z-index: 1;  
 }
 
-/* .margenDerecho {
-    display: flex;
+#cartCounter{
+    color:red;
+    position: absolute;
+    z-index: 2;      
+    
+    /* FUNCIONA, PERO ES UN AJUSTE QUE SE HACE MANUALMENTE, ME GUSTARIA QUE SEA AUTOMATICO/RESPONSIVE */
+    left: 95.25%;
+    top: 24.5%;
+    
+}
 
-    ul {
-        margin: 0;
-        padding: 50px; 
-        list-style: none;
-        display: flex;
-        gap: 15%;
-        align-items: center;
-        justify-content: space-around;
-    }
-} */
+.margenDerecho {    
+    height: 4em;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+
+.margenDerecho ul {
+    list-style: none;
+    margin: auto;
+}

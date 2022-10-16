@@ -21,8 +21,7 @@ return (
         <div className="App">
           <Header/>
           <NavBar/>
-          <Routes>      
-            {/* <Route path='/' element={</>}></Route>       */}
+          <Routes>                  
             <Route path='/' element={<ItemListContainer/>}/>
             <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
             <Route path='/item/:productId' element={<ItemDetailContainer/>}/>  

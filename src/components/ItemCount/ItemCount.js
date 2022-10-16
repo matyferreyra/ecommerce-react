@@ -3,7 +3,7 @@ import {useState} from "react";
 
 
 const ItemCount = (props) =>{
-    const [counter,setCounter] = useState(props.initial); //función para sumar y restar items con un State
+    const [counter,setCounter] = useState(props.initial); 
         
     const addItemCounter = () => {
         if (counter<props.stock) {
@@ -21,17 +21,16 @@ const ItemCount = (props) =>{
                 No hay stock
             </p> :     
         <>
-            <div className="order">
-                <button className="butt" onClick={restItemCounter}>-</button>                
-                {/* <div>Cantidad de Items</div> */}
-                <h1>{counter}</h1>
-                <button className="butt" onClick={addItemCounter}>+</button>
+            <div className="styleCounter">
+                <button className="countItem less" onClick={restItemCounter}>-</button>                                
+                <p id="counter">{counter}</p>
+                <button className="countItem more" onClick={addItemCounter}>+</button>
             </div>
             <div>
-                <button onClick={()=> {props.onAdd(counter)}} className="addCart">Agregar producto al carro de compras</button>
+                <button onClick={()=> {props.onAdd(counter)}} className="addCart">Agregar producto al carrito</button>
             </div>
             <div>
-                <button onClick={()=> {props.puttOff(counter)}} className="addCart">Quitar producto del carro de compras</button>
+                <button onClick={()=> {props.puttOff(counter)}} className="removeCart">Quitar producto del carrito</button>
             </div>
         </>
             }
